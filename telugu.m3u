@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="ETVAndhraPradesh.in@SD" group-title="Telugu Entertainment" tvg-language="Telugu",ETV Andhra Pradesh (source-listed HD)
-https://mumbai-edge.smartplaytv.in/ETVAP/index.m3u8
-#EXTINF:-1 tvg-id="ETVTelangana.in@SD" group-title="Telugu Entertainment" tvg-language="Telugu",ETV Telangana (source-listed HD)
-https://mumbai-edge.smartplaytv.in/ETVTG/index.m3u8
 #EXTINF:-1 tvg-id="ETVPlus.in@HD" group-title="Telugu Entertainment" tvg-language="Telugu",ETV Plus (fallback SD)
 https://yupplivegcpusa.yuppcdn.net/100823/smil:etvplus.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 #EXTINF:-1 tvg-id="ETVCinema.in@SD" group-title="Telugu Movies" tvg-language="Telugu",ETV Cinema (fallback SD)
