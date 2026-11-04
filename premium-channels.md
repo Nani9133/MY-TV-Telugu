@@ -33,3 +33,30 @@ I also searched additional public GitHub playlists. I found some entries that re
 - Direct VLC/M3U feed: not verified for the premium channels as a whole.
 - Official access: use the broadcaster or subscribed provider options above.
 - To include subscription channels in a personal playlist, obtain an M3U export or direct-stream integration explicitly provided by your authorized TV/OTT provider. Do not share account passwords or session tokens in this public repository.
+
+
+## GitHub endpoint audit — 4 November 2026
+
+I searched GitHub code for the required channel names and M3U/HLS endpoint patterns, then compared matches against the current `iptv-org/iptv` India stream list and official broadcaster pages. This was an indexed public-code search, not an exhaustive scan of every GitHub repository.
+
+| Requested channels | What appeared in public repositories | Decision for this playlist |
+|---|---|---|
+| ETV Telugu, Plus, Cinema, AP, Telangana | Several alternate CloudFront and SmartPlayTV HLS entries appear in public M3U files, including the current iptv-org India list. The exact ETV Cinema CloudFront URL in the VLC error also appears in community lists. | Do not claim these are verified working on your network. ETV's official site offers Live TV; use its official player unless an authorized distributor provides a VLC URL. |
+| Star Maa, Star Maa Movies | CloudFront HLS entries appear in community playlists, including iptv-org. Other matches use third-party IP relay servers. A community listing alone does not prove broadcaster authorization. | Not copied into this public playlist. |
+| Star Maa Music | Matches included short-lived YuppTV signed URLs and third-party JioTV relay endpoints. | Excluded: expiring/account-scoped playback links and unofficial relays are not suitable permanent playlist entries. |
+| Zee Telugu, Zee Cinemalu | Official ZEE5 CDN path patterns appear in code, but playlist examples also use expiring `hdntl` signatures and browser headers. | Excluded: no stable, broadcaster-authorized VLC URL confirmed. Use the official ZEE5 Live TV service. |
+| Gemini TV | A candidate URL on the Sun NXT domain appears in community M3U files. A separate public health-report snapshot dated 3 November 2026 records HTTP 403 from its checking environment; regional blocking or authorization could be involved. | Not added: direct playback from an Indian VLC client has not been confirmed. |
+| Gemini Movies, Gemini Music, Gemini Comedy, Gemini Life | The matches I found mostly route through third-party cable-IP addresses or proxy services rather than a clearly publisher-authorized public URL. | Excluded until an authorized direct feed is supplied. |
+
+### Repositories and references checked
+
+- [iptv-org/iptv — India streams](https://github.com/iptv-org/iptv/blob/master/streams/in.m3u)
+- [pabbhi/prdigitv](https://github.com/pabbhi/prdigitv)
+- [aieditsram-svg/kodi9](https://github.com/aieditsram-svg/kodi9)
+- [AdeelWajid/iptv_validated_list](https://github.com/AdeelWajid/iptv_validated_list)
+- [AyaanKhan0111/IPTV — health report](https://github.com/AyaanKhan0111/IPTV/blob/main/reports/dead_channels.txt)
+- [ZEE5 official Telugu live TV](https://www.zee5.com/live-tv/lang/telugu-channels)
+- [Sun NXT official app](https://play.google.com/store/apps/details?id=com.suntv.sunnxt)
+- [Sun Group official channel list](https://www.sun.in/television.aspx)
+
+**Result:** I found public GitHub references for several premium-channel names, but I did not find a stable, verified, broadcaster-authorized M3U endpoint for all requested premium channels. I have deliberately not copied third-party relays, private credentials, expiring account playback tokens, or DRM/session workarounds into `telugu.m3u`.
